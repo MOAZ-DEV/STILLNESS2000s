@@ -12,6 +12,7 @@ const app = (0, express_1.default)();
 const port = process.env.PORT || 3000;
 app.get('/', async (req, res) => {
     console.log('Cron job started at:', new Date().toISOString());
+    res.status(200).write('Cron job started at: ' + new Date().toISOString());
     try {
         const geminiImagePrompt = await (0, useGemini_1.useGemini)({ prompt: shared_1.prompt });
         const geminiCaption = await (0, useGemini_1.useGemini)({ prompt: shared_1.caption });
@@ -20,6 +21,7 @@ app.get('/', async (req, res) => {
     }
     catch (error) {
         console.error('Error occurred during cron job:', error);
+        res.status(400).emit('Error occurred during cron job:' + error + ' at: ' + new Date().toISOString());
     }
 });
 app.listen(port, () => {
