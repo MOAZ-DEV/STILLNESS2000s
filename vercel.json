@@ -1,8 +1,0 @@
-{
-    "crons": [
-        {
-            "path": "/src/index",
-            "schedule": "0 0 * * *"
-        }
-    ]
-}
