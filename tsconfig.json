@@ -13,6 +13,7 @@
   "include": [
     "./api/*.ts",
     "./*.js",
+    "./src/hooks/*.ts",
     "src/**/*.ts",
     "test/**/*.ts",
   ],
