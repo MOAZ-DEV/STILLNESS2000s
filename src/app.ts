@@ -18,7 +18,7 @@ app.use(express.json());
 
 app.get<{}, MessageResponse>('/', (req, res) => {
   res.json({
-    message: '',
+    message: 'I\'m so happy cuz it worked out!',
   });
 });
 
