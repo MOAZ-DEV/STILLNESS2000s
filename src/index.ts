@@ -15,7 +15,7 @@ app.get('/', async (req, res) => {
   });
 })
 export function GET(request?: Request) {
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 6; i++) {
     setTimeout(() => {
       Post();
     }, 200);
@@ -29,9 +29,7 @@ const Post = async () => {
     const pollinationsResult = await usePollinations(geminiImagePrompt.result, 3000, 3000, 'turbo', 24);
     await useInstagram(accessToken, userId, pollinationsResult.res, geminiCaption.result)
       .catch(err => {
-        GET();
-        GET();
-        GET();
+        Post();
       });
   } catch (error) {
     console.clear();
