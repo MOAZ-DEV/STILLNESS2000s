@@ -1,1 +1,15 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }] }
+{
+    "version": 2,
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/api"
+        }
+    ],
+    "crons": [
+        {
+            "path": "/src/index",
+            "schedule": "0 */12 * * *"
+        }
+    ]
+}
