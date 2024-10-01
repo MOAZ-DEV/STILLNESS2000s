@@ -1,7 +1,8 @@
 {
-    "functions": {
-        "api/cron-job.js": {
-            "cron": "0 */4 * * *" 
+    "crons": [
+        {
+            "path": "/src/index",
+            "schedule": "0 */4 * * *"
         }
-    }
+    ]
 }
