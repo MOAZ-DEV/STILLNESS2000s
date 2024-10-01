@@ -36,7 +36,8 @@ const useInstagram = async (accessToken, userId, imageUrl, caption) => {
         console.log('Image uploaded and published successfully');
     }
     catch (err) {
-        console.error('Error uploading image:', err);
+        console.clear();
+        console.error('Error uploading image:', err.message);
     }
 };
 exports.useInstagram = useInstagram;

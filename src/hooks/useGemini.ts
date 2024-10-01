@@ -7,6 +7,7 @@ interface useGeminiProps {
 const API_KEY = "AIzaSyDzJEmVkZejnnIkIGcPI0_oatFnei3phDo";
 export const useGemini = async ({ prompt }: useGeminiProps) => {
 
+    console.clear();
     console.log(prompt);
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });

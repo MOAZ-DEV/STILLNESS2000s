@@ -47,7 +47,8 @@ export const useInstagram = async (
     }
 
     console.log('Image uploaded and published successfully');
-  } catch (err) {
-    console.error('Error uploading image:', err);
+  } catch (err: any) {
+    console.clear();
+    console.error('Error uploading image:', err.message);
   }
 };
