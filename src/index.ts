@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', async (req, res) => {
-  console.log('Cron job started at:', new Date().toISOString());
+  res.send('Cron job started at: ' + new Date().toISOString());
   res.status(200).write('Cron job started at: ' + new Date().toISOString());
   Post().catch((err) => {
     res.status(400).emit('Error occurred during cron job:' + err + ' at: ' + new Date().toISOString())
