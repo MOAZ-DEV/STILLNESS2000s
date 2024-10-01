@@ -14,7 +14,7 @@ app.get('/', async (req, res) => {
     res.status(400).emit('Error occurred during cron job:' + err + ' at: ' + new Date().toISOString())
   });
 })
-export function GET(request?: Request) {
+export default function GET(request?: Request) {
   for (let i = 0; i < 6; i++) {
     setTimeout(() => {
       Post();
