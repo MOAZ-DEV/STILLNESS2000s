@@ -18,7 +18,7 @@ app.get('/', async (req, res) => {
         res.status(400).emit('Error occurred during cron job:' + err + ' at: ' + new Date().toISOString());
     });
 });
-async function GET(request) {
+export default async function GET(request) {
     try {
         const geminiImagePrompt = await (0, useGemini_1.useGemini)({ prompt: shared_1.prompt });
         const geminiCaption = await (0, useGemini_1.useGemini)({ prompt: shared_1.caption });
