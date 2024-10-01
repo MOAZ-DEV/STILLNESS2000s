@@ -26,6 +26,7 @@ const Post = async () => {
     const geminiImagePrompt = await useGemini({ prompt: prompt });
     const geminiCaption = await useGemini({ prompt: caption });
     const pollinationsResult = await usePollinations(geminiImagePrompt.result, 3000, 3000, 'turbo', 24);
+    console.log(pollinationsResult);
     await useInstagram(accessToken, userId, pollinationsResult.res, geminiCaption.result)
       .catch((error) => {
         console.error('Error occurred during Instagram posting:', error);
