@@ -1,0 +1,7 @@
+{
+    "functions": {
+        "api/cron-job.js": {
+            "cron": "0 */4 * * *" 
+        }
+    }
+}
